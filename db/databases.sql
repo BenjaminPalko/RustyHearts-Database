@@ -1,20 +1,24 @@
-IF DB_ID('GMRustyHearts') IS NOT NULL
-  CREATE DATABASE GMRustyHearts;
-  GO
+IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'GMRustyHearts')
+  BEGIN
+    CREATE DATABASE [GMRustyHearts]
+  END
 
-IF DB_ID('RustyHearts') IS NOT NULL
-  CREATE DATABASE RustyHearts;
-  GO
+IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'RustyHearts')
+  BEGIN
+    CREATE DATABASE [RustyHearts]
+  END
 
-IF DB_ID('RustyHearts_Account') IS NOT NULL
-  CREATE DATABASE RustyHearts_Account;
-  GO
+IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'RustyHearts_Account')
+  BEGIN
+    CREATE DATABASE [RustyHearts_Account]
+  END
 
-IF DB_ID('RustyHearts_Auth') IS NOT NULL
-  CREATE DATABASE RustyHearts_Auth;
-  GO
+IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'RustyHearts_Auth')
+  BEGIN
+    CREATE DATABASE [RustyHearts_Auth]
+  END
 
-IF DB_ID('RustyHearts_Log') IS NOT NULL
-  CREATE DATABASE RustyHearts_Log;
-  GO
-
+IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'RustyHearts_Log')
+  BEGIN
+    CREATE DATABASE [RustyHearts_Log]
+  END
